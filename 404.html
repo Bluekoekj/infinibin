@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)https://doxbin.net/404 -->
+<html lang="en"><script>
+    (function() {
+    class RuffleMimeType {
+        constructor(a, b, c) {
+            this.type = a, this.description = b, this.suffixes = c
+        }
+    }
+    class RuffleMimeTypeArray {
+        constructor(a) {
+            this.__mimetypes = [], this.__named_mimetypes = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__mimetypes.length;
+            this.__mimetypes.push(a), this.__named_mimetypes[a.type] = a, this[a.type] = a, this[b] = a
+        }
+        item(a) {
+            return this.__mimetypes[a]
+        }
+        namedItem(a) {
+            return this.__named_mimetypes[a]
+        }
+        get length() {
+            return this.__mimetypes.length
+        }
+    }
+    class RufflePlugin extends RuffleMimeTypeArray {
+        constructor(a, b, c, d) {
+            super(d), this.name = a, this.description = b, this.filename = c
+        }
+        install(a) {
+            a.enabledPlugin || (a.enabledPlugin = this), super.install(a)
+        }
+    }
+    class RufflePluginArray {
+        [Symbol.iterator]() {
+            return this.__plugins[Symbol.iterator]()
+        }
+        constructor(a) {
+            this.__plugins = [], this.__named_plugins = {};
+            for (let b of a) this.install(b)
+        }
+        install(a) {
+            let b = this.__plugins.length;
+            this.__plugins.push(a), this.__named_plugins[a.name] = a, this[a.name] = a, this[b] = a
+        }
+        item(a) {
+            return this.__plugins[a]
+        }
+        namedItem(a) {
+            return this.__named_plugins[a]
+        }
+        refresh() {}
+        get length() {
+            return this.__plugins.length
+        }
+    }
+    const FLASH_PLUGIN = new RufflePlugin("Shockwave Flash", "Shockwave Flash 32.0 r0", "ruffle.js", [new RuffleMimeType("application/futuresplash", "Shockwave Flash", "spl"), new RuffleMimeType("application/x-shockwave-flash", "Shockwave Flash", "swf"), new RuffleMimeType("application/x-shockwave-flash2-preview", "Shockwave Flash", "swf"), new RuffleMimeType("application/vnd.adobe.flash.movie", "Shockwave Flash", "swf")]);
+
+    function install_plugin(a) {
+        navigator.plugins.install || Object.defineProperty(navigator, "plugins", {
+            value: new RufflePluginArray(navigator.plugins),
+            writable: !1
+        }), navigator.plugins.install(a), 0 < a.length && !navigator.mimeTypes.install && Object.defineProperty(navigator, "mimeTypes", {
+            value: new RuffleMimeTypeArray(navigator.mimeTypes),
+            writable: !1
+        });
+        for (var b = 0; b < a.length; b += 1) navigator.mimeTypes.install(a[b])
+    }
+    install_plugin(FLASH_PLUGIN);
+})();
+</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Page Not Found</title>
+
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+        <link href="./404_files/css" rel="stylesheet" type="text/css">
+
+        <!-- Styles -->
+        <style>
+        html {
+            line-height: 1.15;
+                -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header,
+        nav,
+        section {
+            display: block;
+        }
+
+        figcaption,
+        main {
+            display: block;
+        }
+
+        a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+
+        strong {
+            font-weight: inherit;
+        }
+
+        strong {
+            font-weight: bolder;
+        }
+
+        code {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+
+        dfn {
+            font-style: italic;
+        }
+
+        svg:not(:root) {
+            overflow: hidden;
+        }
+
+        button,
+        input {
+            font-family: sans-serif;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0;
+        }
+
+        button,
+        input {
+            overflow: visible;
+        }
+
+        button {
+            text-transform: none;
+        }
+
+        button,
+        html [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+        }
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            border-style: none;
+            padding: 0;
+        }
+
+        button:-moz-focusring,
+        [type="button"]:-moz-focusring,
+        [type="reset"]:-moz-focusring,
+        [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        legend {
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            color: inherit;
+            display: table;
+            max-width: 100%;
+            padding: 0;
+            white-space: normal;
+        }
+
+        [type="checkbox"],
+        [type="radio"] {
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            padding: 0;
+        }
+
+        [type="number"]::-webkit-inner-spin-button,
+        [type="number"]::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        [type="search"] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px;
+        }
+
+        [type="search"]::-webkit-search-cancel-button,
+        [type="search"]::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit;
+        }
+
+        menu {
+            display: block;
+        }
+
+        canvas {
+            display: inline-block;
+        }
+
+        template {
+            display: none;
+        }
+
+        [hidden] {
+            display: none;
+        }
+
+        html {
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        *,
+        *::before,
+        *::after {
+            -webkit-box-sizing: inherit;
+                    box-sizing: inherit;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        button {
+            background: transparent;
+            padding: 0;
+        }
+
+        button:focus {
+            outline: 1px dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+        }
+
+        *,
+        *::before,
+        *::after {
+            border-width: 0;
+            border-style: solid;
+            border-color: #dae1e7;
+        }
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            border-radius: 0;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        input::-webkit-input-placeholder {
+            color: inherit;
+            opacity: .5;
+        }
+
+        input:-ms-input-placeholder {
+            color: inherit;
+            opacity: .5;
+        }
+
+        input::-ms-input-placeholder {
+            color: inherit;
+            opacity: .5;
+        }
+
+        input::placeholder {
+            color: inherit;
+            opacity: .5;
+        }
+
+        button,
+        [role=button] {
+            cursor: pointer;
+        }
+
+        .bg-transparent {
+            background-color: transparent;
+        }
+
+        .bg-white {
+            background-color: #fff;
+        }
+
+        .bg-teal-light {
+            background-color: #64d5ca;
+        }
+
+        .bg-blue-dark {
+            background-color: #2779bd;
+        }
+
+        .bg-indigo-light {
+            background-color: #7886d7;
+        }
+
+        .bg-purple-light {
+            background-color: #a779e9;
+        }
+
+        .bg-no-repeat {
+            background-repeat: no-repeat;
+        }
+
+        .bg-cover {
+            background-size: cover;
+        }
+
+        .border-grey-light {
+            border-color: #dae1e7;
+        }
+
+        .hover\:border-grey:hover {
+            border-color: #b8c2cc;
+        }
+
+        .rounded-lg {
+            border-radius: .5rem;
+        }
+
+        .border-2 {
+            border-width: 2px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .items-center {
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+        }
+
+        .justify-center {
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+        }
+
+        .font-sans {
+            font-family: Nunito, sans-serif;
+        }
+
+        .font-light {
+            font-weight: 300;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-black {
+            font-weight: 900;
+        }
+
+        .h-1 {
+            height: .25rem;
+        }
+
+        .leading-normal {
+            line-height: 1.5;
+        }
+
+        .m-8 {
+            margin: 2rem;
+        }
+
+        .my-3 {
+            margin-top: .75rem;
+            margin-bottom: .75rem;
+        }
+
+        .mb-8 {
+            margin-bottom: 2rem;
+        }
+
+        .max-w-sm {
+            max-width: 30rem;
+        }
+
+        .min-h-screen {
+            min-height: 100vh;
+        }
+
+        .py-3 {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+        }
+
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .pb-full {
+            padding-bottom: 100%;
+        }
+
+        .absolute {
+            position: absolute;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .pin {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .text-black {
+            color: #22292f;
+        }
+
+        .text-grey-darkest {
+            color: #3d4852;
+        }
+
+        .text-grey-darker {
+            color: #606f7b;
+        }
+
+        .text-2xl {
+            font-size: 1.5rem;
+        }
+
+        .text-5xl {
+            font-size: 3rem;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .antialiased {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .tracking-wide {
+            letter-spacing: .05em;
+        }
+
+        .w-16 {
+            width: 4rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .md\:bg-left {
+                background-position: left;
+            }
+
+            .md\:bg-right {
+                background-position: right;
+            }
+
+            .md\:flex {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            .md\:my-6 {
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .md\:min-h-screen {
+                min-height: 100vh;
+            }
+
+            .md\:pb-0 {
+                padding-bottom: 0;
+            }
+
+            .md\:text-3xl {
+                font-size: 1.875rem;
+            }
+
+            .md\:text-15xl {
+                font-size: 9rem;
+            }
+
+            .md\:w-1\/2 {
+                width: 50%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .lg\:bg-center {
+                background-position: center;
+            }
+        }
+        </style>
+    <style type="text/css">[id^=root], [id^=docs], .cc_cursor, body, .ogdlpmhglpejoiomcodnpjnfgcpmgale_default, body, html, input[type="date"], input[type="time"], input[type="datetime-local"], input[type="month"], input::-webkit-contacts-auto-fill-button, input:read-only {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAA8NJREFUSEu11VtsFFUcx/HvmTOzyy69QbXbEiubhibEVQR8EaixK2jU1EvUNDF9gReJ8mS8FBMh6UMNWn1YxWoFSyHGaNSmeEPB1BSbKMVA1bKQtGhtu216sdvLbvc2M8fs1gZIMNsinpfzcGZ+n/P/z8kZQTjQhu54itynx/gfhtDCAbUc/YeULvbEc5/puN6GEOGAWqeXUCzzx76NB9tY+ezO64kIwgFloLHfXUnITnAk3tMyajv3xgqfHLweUAZIB62Xq3hr2WYumLO0JkbPHIsMNVFa895/RQRTgQS2dGjKoN5VQYUsJGLbHI4OxVojoVeS0dRr+KqT1woJwm+PYulF2AblFNCUtxknkqSC9liYj2bGzvZGI9X47u+7FkQw0XQey1ibBtz2MmqX+9jqLCKpFMFkjEHT5OR0eDwYN3dNO1Z+Tnl5YimQYPRQJ5a+JQ1g6VQ6S9idW05KKdpjs0hbQ9mSiZQ180U40jV5+7p7lwaMfHAUy3g4HY4l0WyDphtuY5V00z43i1QSlIawNVxIGkPhP3TT+eBwor8Pv9/MhgmGPm7G0ndkgH+q2OBYQeDGNfwaTzCQMjPh6UoEGqap0Tdn9ndMqpaJu0rqsgMDrQ2Y8vmF8DQkbIPXPWvI13T6Yim0dAVKm5/TkK0RtzRzf3/8RDTpqKGqIPxvkODil3Uobe98iwyw07OOV7o4WFrGqUicqRTETIFlC1Ug9MmkLcK/zdiJU5MiMW3JFlw5B/CL+NUQQe83tdhy36UWyQzgxkFtkYc8zcH7I5HxqaRqHJ5Tpq0cP0POabbl/ZWtPel1wfnjO1HGu5e3aKGKe3LyeKG4kDeHI6FjE6kq/Dd1Lyb08mcE575/AmV8Mt+i9IfOzP1Yhjd9qprLPASjFgdDsTemKN6NX2Q9OVcCPZ1+LL39Urj8EYwaTGMPptyx0eWi3ltAQ39iqH0sdjdVnt+XUoWg+/QGbHEm0yJT/okttrHploucHLoVWzuLJWX96jxmU4IjI+rD4a3umqUBXd0+hOhB6QMkE5uo2DicCVBKcGKsDoyXvbou6spcvNqrCEaNm3lULPoqF3Sd86E4hGI7d/qCV+zu+OQWTP0zt5Ce7R4HXqfkpQuiw3ocP4jMNZ9tCH7qzUM3V3PH2h7EVV76KvY1lvZAZb7OfSs0BmNE3wmxi8fE4Wzh88d0MaPNimJq7ue8IIHGAQIRkxepFln/E4sDWlUtin3rc6HMRed34xyYMfiUh8Rctv0tDmhTpVg0Y9OAg194RIxmC15Y/xuGt6MoDcvsWwAAAABJRU5ErkJggg==") 0 0 , auto !important; }[role^=button], button, .cc_pointer, [type="search"]::-webkit-search-cancel-button, a, select, [type="search"]::-webkit-search-decoration, .paper-button, .ytp-progress-bar-container, input[type=submit], :link, :visited, a > *, img, button, ::-webkit-scrollbar-button, .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer, ::-webkit-file-upload-button, button, .ytp-volume-panel, #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon { cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAvdJREFUSEvVlV9IU1Ecx7/n7O5f23RtampZSpCY5Us5ElJmD0VilD0Y9FIU9BRGFEhBBRXkIAIToh6innrpJaM/UoGYooQhyriOpH+SlWtYS53tj7sn7j+9ujszaA8NLoNzzj2f8/t9v99zCdL9wq1dYKgBI/VwNT1Ou+4PEyTt/I9WJs0R4oezqeLfAhgjCF8XpE0pAsg+sfF/BLQJABFbFIDzeAYq+H5TBoAG4D6WAcC3OzKAkQDyD2cA8PWeAMlHJIDVBzMA+HRfaRHxWxghpZydjCSiw7+K9zb+jaP0cyDa9GO7AEZgBtgVZzmJg8FKDGgLj/qqrCub/dFJDMYSazabrA7LLGfo5yLvUFIbXQxPD3jbIeWggJoxLSSl54A9H25qRIwBW63Z8IXev6xz5HkoYBmMxi92l1RcWD7gzQsBjIKCQJC0oDAxgjO569ASGoOTGLA7y50YTySM/plpnMwr4k/nFm5aPoDvkZPMqCg0FMGRTzmMJ5Oiu9CcVwBfMCgtq7TZ+f4NZTqA3l5XQ2H2kX2OHPvV4JeQPxi+Ba83iaFXqsjSZjJMsq1ySAoH5TCVFGQ4Izw8FamAsuHBlkZXzqkio5GbmE3GRqKx87fXFl/DwEBCyYGyuVqJCtFCqZh4HttKdSoYeP0MjFaCUWep0YhaRxb6Jmeqh+KJ7gUnl0OntEv9l3KiVsVj+3odAM+bEBGOQjD4COCosa1Auc3Sd2P8Z9XCCrQA7cYagHdtGpE7P1hgTj6FAK+JUFTZzOiaii3suSS2ooN0RwEQlEqkS5H2YMeq6qVd1DU6AUZcKSefb4MGqhFchl/GLve5pQGdY4cgGO7Ou2WxexbpoHEUEC9CnXtsaUBHqACEPACoR7aeNgNUyYI6ruigVrfHonsrpA4+iZwFY5fEpqrhmg+aCtG2RwphPxo4j94lmAp4FNkCxj0EI4VzAG3Q5lKtOkly6k7sJ8+XBxBv0nb4IbBy+YsmtkTvVWWMYRAC6tFIPuut+g1nYzIoUpg8SAAAAABJRU5ErkJggg==") 7 0, auto !important; } * {cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAA8NJREFUSEu11VtsFFUcx/HvmTOzyy69QbXbEiubhibEVQR8EaixK2jU1EvUNDF9gReJ8mS8FBMh6UMNWn1YxWoFSyHGaNSmeEPB1BSbKMVA1bKQtGhtu216sdvLbvc2M8fs1gZIMNsinpfzcGZ+n/P/z8kZQTjQhu54itynx/gfhtDCAbUc/YeULvbEc5/puN6GEOGAWqeXUCzzx76NB9tY+ezO64kIwgFloLHfXUnITnAk3tMyajv3xgqfHLweUAZIB62Xq3hr2WYumLO0JkbPHIsMNVFa895/RQRTgQS2dGjKoN5VQYUsJGLbHI4OxVojoVeS0dRr+KqT1woJwm+PYulF2AblFNCUtxknkqSC9liYj2bGzvZGI9X47u+7FkQw0XQey1ibBtz2MmqX+9jqLCKpFMFkjEHT5OR0eDwYN3dNO1Z+Tnl5YimQYPRQJ5a+JQ1g6VQ6S9idW05KKdpjs0hbQ9mSiZQ180U40jV5+7p7lwaMfHAUy3g4HY4l0WyDphtuY5V00z43i1QSlIawNVxIGkPhP3TT+eBwor8Pv9/MhgmGPm7G0ndkgH+q2OBYQeDGNfwaTzCQMjPh6UoEGqap0Tdn9ndMqpaJu0rqsgMDrQ2Y8vmF8DQkbIPXPWvI13T6Yim0dAVKm5/TkK0RtzRzf3/8RDTpqKGqIPxvkODil3Uobe98iwyw07OOV7o4WFrGqUicqRTETIFlC1Ug9MmkLcK/zdiJU5MiMW3JFlw5B/CL+NUQQe83tdhy36UWyQzgxkFtkYc8zcH7I5HxqaRqHJ5Tpq0cP0POabbl/ZWtPel1wfnjO1HGu5e3aKGKe3LyeKG4kDeHI6FjE6kq/Dd1Lyb08mcE575/AmV8Mt+i9IfOzP1Yhjd9qprLPASjFgdDsTemKN6NX2Q9OVcCPZ1+LL39Urj8EYwaTGMPptyx0eWi3ltAQ39iqH0sdjdVnt+XUoWg+/QGbHEm0yJT/okttrHploucHLoVWzuLJWX96jxmU4IjI+rD4a3umqUBXd0+hOhB6QMkE5uo2DicCVBKcGKsDoyXvbou6spcvNqrCEaNm3lULPoqF3Sd86E4hGI7d/qCV+zu+OQWTP0zt5Ce7R4HXqfkpQuiw3ocP4jMNZ9tCH7qzUM3V3PH2h7EVV76KvY1lvZAZb7OfSs0BmNE3wmxi8fE4Wzh88d0MaPNimJq7ue8IIHGAQIRkxepFln/E4sDWlUtin3rc6HMRed34xyYMfiUh8Rctv0tDmhTpVg0Y9OAg194RIxmC15Y/xuGt6MoDcvsWwAAAABJRU5ErkJggg==") 0 0 , auto }a, button, [type^=button], [role^=button]   { cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAvdJREFUSEvVlV9IU1Ecx7/n7O5f23RtampZSpCY5Us5ElJmD0VilD0Y9FIU9BRGFEhBBRXkIAIToh6innrpJaM/UoGYooQhyriOpH+SlWtYS53tj7sn7j+9ujszaA8NLoNzzj2f8/t9v99zCdL9wq1dYKgBI/VwNT1Ou+4PEyTt/I9WJs0R4oezqeLfAhgjCF8XpE0pAsg+sfF/BLQJABFbFIDzeAYq+H5TBoAG4D6WAcC3OzKAkQDyD2cA8PWeAMlHJIDVBzMA+HRfaRHxWxghpZydjCSiw7+K9zb+jaP0cyDa9GO7AEZgBtgVZzmJg8FKDGgLj/qqrCub/dFJDMYSazabrA7LLGfo5yLvUFIbXQxPD3jbIeWggJoxLSSl54A9H25qRIwBW63Z8IXev6xz5HkoYBmMxi92l1RcWD7gzQsBjIKCQJC0oDAxgjO569ASGoOTGLA7y50YTySM/plpnMwr4k/nFm5aPoDvkZPMqCg0FMGRTzmMJ5Oiu9CcVwBfMCgtq7TZ+f4NZTqA3l5XQ2H2kX2OHPvV4JeQPxi+Ba83iaFXqsjSZjJMsq1ySAoH5TCVFGQ4Izw8FamAsuHBlkZXzqkio5GbmE3GRqKx87fXFl/DwEBCyYGyuVqJCtFCqZh4HttKdSoYeP0MjFaCUWep0YhaRxb6Jmeqh+KJ7gUnl0OntEv9l3KiVsVj+3odAM+bEBGOQjD4COCosa1Auc3Sd2P8Z9XCCrQA7cYagHdtGpE7P1hgTj6FAK+JUFTZzOiaii3suSS2ooN0RwEQlEqkS5H2YMeq6qVd1DU6AUZcKSefb4MGqhFchl/GLve5pQGdY4cgGO7Ou2WxexbpoHEUEC9CnXtsaUBHqACEPACoR7aeNgNUyYI6ruigVrfHonsrpA4+iZwFY5fEpqrhmg+aCtG2RwphPxo4j94lmAp4FNkCxj0EI4VzAG3Q5lKtOkly6k7sJ8+XBxBv0nb4IbBy+YsmtkTvVWWMYRAC6tFIPuut+g1nYzIoUpg8SAAAAABJRU5ErkJggg==") 7 0, auto }</style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 500;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style:  normal;
+  font-family: 'Circular-Loom';
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Black.woff2') format('woff2');
+}</style></head>
+    <body class="antialiased font-sans">
+        <div class="md:flex min-h-screen">
+            <div class="w-full md:w-1/2 bg-white flex items-center justify-center">
+                <div class="max-w-sm m-8">
+                    <div class="text-black text-5xl md:text-15xl font-black">
+                        :(                    </div>
+
+                    <div class="w-16 h-1 bg-purple-light my-3 md:my-6"></div>
+
+                    <p class="text-grey-darker text-2xl md:text-3xl font-light mb-8 leading-normal">
+                        We searched far and wide, but couldn't find what you were looking for!                   </p>
+
+                    <a href="https://bluekoekj.github.io/infinibin/">
+                        <button class="bg-transparent text-grey-darkest font-bold uppercase tracking-wide py-3 px-6 border-2 border-grey-light hover:border-grey rounded-lg">
+                            Return to home
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative pb-full md:flex md:pb-0 md:min-h-screen w-full md:w-1/2">
+                    <div style="background-image: url(https://doxbin.net/svg/404.svg);" class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center">
+    </div>
+            </div>
+        </div>
+    
+
+</body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container><loom-container id="lo-companion-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>
